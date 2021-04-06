@@ -1,0 +1,5 @@
+rootProject.name = 'nacos-boot-gradle'
+include 'api'
+include 'nacos-common'
+include 'consumer-8080'
+include 'servant-user-8090'

@@ -1,0 +1,33 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+allprojects {
+    apply plugin: 'war'
+    apply plugin: 'java'
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    group = 'com.jjx'
+    version = "1.0-SNAPSHOT"
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    }
+    jar {
+        enabled = true
+    }
+}
+subprojects {
+    repositories {
+        mavenCentral()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    }
+}

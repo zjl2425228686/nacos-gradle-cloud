@@ -1,0 +1,9 @@
+dependencies {
+    compile project(':api')
+    compile project(':nacos-common')
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.zjl.servantuser8090.ServantUser8090Application'
+    }
+}
